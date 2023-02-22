@@ -59,4 +59,5 @@ jobs:
             echo $tag
             docker tag demo:0.0.1-SNAPSHOT $tag
           done
+          docker tag demo:0.0.1-SNAPSHOT ghcr.io/${{ github.repository }}:latest
           docker push ghcr.io/${{ github.repository }}
