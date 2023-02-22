@@ -60,4 +60,5 @@ jobs:
             docker tag demo:0.0.1-SNAPSHOT $tag
           done
           docker tag demo:0.0.1-SNAPSHOT ghcr.io/${{ github.repository }}:latest
+          docker login ghcr.io -u ${{ github.actor }} ${{ secrets.GITHUB_TOKEN }}
           docker push ghcr.io/${{ github.repository }}
