@@ -56,7 +56,7 @@ jobs:
       - name: Build and push
         run: |
           for tag in $(jq -r '.tags[]' <<< "$DOCKER_METADATA_OUTPUT_JSON"); do
-            echo tag
+            echo $tag
             docker tag demo:0.0.1-SNAPSHOT ghcr.io/${{ github.repository }}:$tag
           done
           docker push ghcr.io/${{ github.repository }}
