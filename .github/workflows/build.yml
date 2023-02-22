@@ -54,8 +54,8 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
       - name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+        run: |
+          for tag in $(jq -r '.tags[]' <<< "$DOCKER_METADATA_OUTPUT_JSON"); do
+                      docker tag demo:0.0.1-SNAPSHOT ghcr.io/${{ github.repository }}:$tag
+          done
+          docker push ghcr.io/${{ github.repository }}
