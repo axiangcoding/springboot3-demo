@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.table.Table1;
+import com.example.demo.entity.Table1;
 import com.example.demo.service.Table1Service;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
