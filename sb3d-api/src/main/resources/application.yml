@@ -1,3 +1,6 @@
+server:
+  port: 8890
+
 spring:
   jpa:
     open-in-view: false
@@ -5,7 +8,11 @@ spring:
       ddl-auto: update
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/nativedemo
+    url: jdbc:postgresql://10.103.4.237:5432/nativedemo
     username: postgres
     password: example
+
+logging:
+  file:
+    name: ./logs/sb3d.log
 

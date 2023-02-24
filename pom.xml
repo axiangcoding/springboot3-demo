@@ -15,7 +15,6 @@
     <name>springboot3-demo</name>
     <description>springboot3-demo</description>
     <modules>
-        <module>sb3d-entity</module>
         <module>sb3d-dao</module>
         <module>sb3d-service</module>
         <module>sb3d-api</module>
@@ -24,7 +23,6 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
-
         <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
         <dependency>
             <groupId>org.hibernate.validator</groupId>
@@ -33,27 +31,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
-
-
 </project>
