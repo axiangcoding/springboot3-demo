@@ -11,6 +11,13 @@ spring:
     url: jdbc:postgresql://localhost:5432/nativedemo
     username: postgres
     password: example
+  data:
+    redis:
+      url: redis://localhost:6379
+      lettuce:
+        pool:
+          enabled: true
+
 
 logging:
   file:
